@@ -36,6 +36,34 @@ class LivreManager extends BDConnexion{
             //En faisant cela, on vient de générer nos livres
             $book = new Livre($value['idLivre'],$value['titre'],$value['nbPages'],$value['image']);
             $this->ajoutLivre($book);
+          }
+
+     }
+
+        public function getLivreById($id){
+             for($i=0;$i<count($this->livres);$i++){
+                 if($this->livres[$i]->getIdLivre() === $id){
+                    return $this->livres[$i];
+            }
+        }
+    }
+
+    public function ajoutLivreBD($titre,$nbPages,$image){
+
+        $req = "INSERT INTO livres(titre,nbPages,image)
+        values (:titre,:nbPages, :image)";
+
+        $stmt =$this->getBdd()->prepare($req);
+        $stmt->bindValue(":titre",$titre,PDO::PARAM_STR);
+        $stmt->bindValue(":nbPages",$nbPages,PDO::PARAM_STR);
+        $stmt->bindValue(":image",$image,PDO::PARAM_STR);
+
+        $resultat = $stmt->execute();
+        $stmt->closeCursor();
+
+        if($resultat > 0){
+            $livre = new Livre($this->getBdd()->lastInsertId(),$titre,$nbPages,$image);
+            $this-> ajoutLivre($Livre);
         }
 
     }

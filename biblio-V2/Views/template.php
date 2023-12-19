@@ -16,8 +16,8 @@
             <nav>
                 <h2 class="logo">AFCI | <span>BIBLIOTHEQUE</span></h2>
                 <ul>
-                    <li><a href="index">Accueil</a></li>
-                    <li><a href="livres">Livres</a></li>
+                    <li><a href="<?php URL  ?>accueil ">Accueil</a></li>
+                    <li><a href="<?php URL  ?>livres ">Livres</a></li>
                     <li><a href="">Contact</a></li>
                 </ul>
                 <!-- <button type="button">Connexion</button> -->

@@ -17,7 +17,7 @@ ob_start()
 
         <tr>
             <td><img src="public/images/<?= $livres[$i]->getImage();?>" alt=""></td>
-            <td><?= $livres[$i]->getTitre();?></td>
+            <td><a href="<?= URL ?>livres/l/<?= $livres[$i]->getIdLivre();?>"<?= URL ?> </td>
             <td><?= $livres[$i]->getNbPages();?></td>
             <td>
                 <!-- Divisez la colonne "Actions" en deux sous-colonnes -->
@@ -28,7 +28,8 @@ ob_start()
         <?php endfor; ?>
 
     </table>
-    <button>Ajouter</button>
+    <a href="<?= URL ?>livres/l/"?>"<button>Ajouter</button>
+
 <?php 
 $titre = "Les livres de la bibliothèque";
 $content = ob_get_clean();

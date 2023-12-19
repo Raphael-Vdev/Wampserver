@@ -10,7 +10,7 @@ abstract class BDConnexion{
     //Cette méthode est en private, je ne vais pas qu'elle soit appelée par des algorithme tiers
     //Je veux juste qu'elle soit accessible par la méthode getbdd
     private static function setBDD(){
-        self::$pdo = new PDO('mysql:host=localhost;port=3306;dbname=biblio;charset=utf8','root','');
+        self::$pdo = new PDO('mysql:host=localhost;port=3308;dbname=biblio;charset=utf8','root','');
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE,pdo::ERRMODE_WARNING);
     }
 
