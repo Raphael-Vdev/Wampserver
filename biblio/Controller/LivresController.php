@@ -35,7 +35,7 @@ class livresController{
 
       $this->livreManager->ajoutLivreBD()
 
-      header('Location : '. URL )
+      header('Location :'. URL )
     }
     
     private function ajoutImage($file, $dir){

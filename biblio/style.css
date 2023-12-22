@@ -1,0 +1,118 @@
+:root {
+  --font-family: 'Open Sans', sans-serif;
+  --primary: #8e44ad;
+  --dark: #2c3e50;
+  --background-light: #ecf0f1;
+  --text-color: #444;
+  --text-color-light: #fff;
+  --box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  --border: 1px solid #eee;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-size: 10px;
+  font-family: var(--font-family);
+  background-color: var(--background-light);
+}
+.container {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  color: var(--text-color);
+  /*----------HEADER--------------*/
+  /*----------Section Container--------------*/
+  /*----------FOOTER--------------*/
+}
+.container header {
+  background-color: var(--primary);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow);
+}
+.container header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container header nav .logo {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--text-color-light);
+}
+.container header nav .logo span {
+  color: black;
+}
+.container header nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px ;
+}
+.container header nav ul li a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+}
+.container header nav ul li a:hover {
+  color: black;
+  transition: 0.3s;
+}
+.container .contenu {
+  margin: 0 auto;
+}
+.container .contenu h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+.container .contenu p {
+  margin-bottom: 20px;
+}
+.container .contenu table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.container .contenu table th,
+.container .contenu table td {
+  border: 1px solid var(--text-color);
+  /* Change the border color to your preference */
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+.container .contenu table th img,
+.container .contenu table td img {
+  width: 60px;
+}
+.container .contenu table th {
+  background-color: var(--dark);
+  /* Change the background color of the header row */
+  color: var(--text-color-light);
+}
+.container .contenu button {
+  font-size: 12px;
+  padding: 10px 12px;
+}
+.container .contenu button:nth-child(1) {
+  background-color: orange;
+}
+.container .contenu button:nth-child(2) {
+  background-color: red;
+}
+.container .contenu button:nth-child(3) {
+  margin-top: 20px;
+  background-color: green;
+  width: 100%;
+}
+.container footer {
+  background-color: var(--dark);
+  display: flex;
+  flex-flow: row-reverse;
+  color: var(--text-color-light);
+  padding: 1.5rem;
+  margin-top: auto;
+}

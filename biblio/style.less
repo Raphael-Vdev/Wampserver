@@ -1,0 +1,140 @@
+// Variable css
+:root{
+    --font-family: 'Open Sans', sans-serif;
+    --primary:#8e44ad;
+    --dark:#2c3e50;
+    --background-light:#ecf0f1;
+    --text-color:#444;
+    --text-color-light:#fff;
+    --box-shadow:rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    --border:1px solid #eee;
+}
+
+
+// reset
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-size: 10px;
+    font-family: var(--font-family);
+    background-color: var(--background-light);
+}
+
+.container{
+    font-size: 1.6rem;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    color: var(--text-color);
+
+    /*----------HEADER--------------*/
+    header{
+        background-color: var(--primary);
+        padding: 1.5rem;
+        box-shadow: var(--box-shadow);
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                font-weight: 700;
+                font-size: 2rem;
+                color: var(--text-color-light);
+                span{
+                    color: black;
+                }
+            }
+            ul li{
+                list-style-type: none;
+                display: inline-block;
+                padding: 10px ;
+                a{
+                    color: whitesmoke;
+                    text-decoration: none;
+                    font-weight: bold;
+                }a:hover{
+                    color: black;
+                    transition: .3s;
+                }
+            }
+
+        }
+
+    }
+
+    /*----------Section Container--------------*/
+
+        .contenu{
+            margin: 0 auto;
+            h1{
+                // text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                font-size: 2.5em;
+            }
+            p{
+                // text-align: center;
+                margin-bottom: 20px;
+             
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                
+        
+                th, td {
+                    border: 1px solid var(--text-color); /* Change the border color to your preference */
+                    padding: 10px;
+                    text-align: center;
+                    font-weight: 400;
+                    img{
+                        width: 60px;
+                    }
+                }
+        
+                th {
+                    background-color: var(--dark); /* Change the background color of the header row */
+                    color: var(--text-color-light);
+                }
+            }
+            button{
+                font-size: 12px;
+                padding: 10px 12px;
+                &:nth-child(1){
+                    background-color: orange;
+                }
+                &:nth-child(2){
+                    background-color: red;
+                }
+                &:nth-child(3){
+                    margin-top: 20px;
+                    background-color: green;
+                    width: 100%;
+                }
+            }
+
+       
+        }
+
+
+
+    
+
+
+    
+
+    /*----------FOOTER--------------*/
+
+    footer{
+        background-color: var(--dark);
+        display: flex;
+        flex-flow: row-reverse;
+        color: var(--text-color-light);
+        padding: 1.5rem;
+        margin-top: auto;
+    }
+}

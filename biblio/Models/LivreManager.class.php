@@ -63,30 +63,9 @@ class LivreManager extends BDConnexion{
 
         if($resultat > 0){
             $livre = new Livre($this->getBdd()->lastInsertId(),$titre,$nbPages,$image);
-            $this-> ajoutLivre($livre);
+            $this-> ajoutLivre($Livre);
         }
 
     }
-
-    public function suppressionLivreBD($id) {
-        $req = "DELETE FROM livres WHERE id = :idLivre";
-        // je récupere ma connexion dans la variable statement
-        $stmt = $this->getBdd()->prepare($req);
-        // Ensuite je renseigne le paramètre : IdLivre qui va prendre le paramètre de fonction
-        $stmt->bindValue(':idLivre',$id,PDO::PARAM_INT);
-        // j'execute la requête 
-    }
-
-    
-    public function ($id) {
-        $req = "DELETE FROM livres WHERE id = :idLivre";
-        // je récupere ma connexion dans la variable statement
-        $stmt = $this->getBdd()->prepare($req);
-        // Ensuite je renseigne le paramètre : IdLivre qui va prendre le paramètre de fonction
-        $stmt->bindValue(':idLivre',$id,PDO::PARAM_INT);
-        // j'execute la requête 
-    }
-
-
 
 }
